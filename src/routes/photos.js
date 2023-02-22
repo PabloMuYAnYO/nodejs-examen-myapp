@@ -87,7 +87,7 @@ router.get('/masvotadas',(req, res, next) =>{
 });
 
 router.get('/menosvotadas',(req, res, next) =>{
-  res.render('masvotadas');
+  res.render('menosvotadas');
 });
 
 module.exports = router;
