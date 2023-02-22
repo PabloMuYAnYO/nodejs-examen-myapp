@@ -82,4 +82,12 @@ router.get('/deletephoto/:id',(req, res, next) =>{
     );
 });
 
+router.get('/masvotadas',(req, res, next) =>{
+  res.render('masvotadas');
+});
+
+router.get('/menosvotadas',(req, res, next) =>{
+  res.render('masvotadas');
+});
+
 module.exports = router;

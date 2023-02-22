@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <%- include('./partials/head.ejs') %>
+  <!-- Tailwind config for photos.ejs -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              coral: '#FF7F50',
+              whitesmoke : '#F5F5F5',
+              FFC300: '#FFC300',
+              C70039: '#C70039',
+              229954: '#229954 ' 
+            }
+          }
+        }
+      }
+    </script>
+    <title>YourPhotos | Last ost voted Photos!</title>
+</head>
+<body>
+    <%- include('./partials/navigation.ejs') %>
+    <div class="bg-white">
+        <div class="mt-6">
+          <h2 class="text-2xl font-bold tracking-tight text-gray-900">Last voted photos!</h2>
+          <hr>
+          
+            <div class="flex flex-row flex-wrap justify-center items-center">
+
+
+
+            </div>
+
+
+        </div>
+      </div>
+</body>
+</html>
