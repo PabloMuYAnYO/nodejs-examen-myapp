@@ -18,18 +18,26 @@
                 coral: '#FF7F50',
                 whitesmoke : '#F5F5F5',
                 FFC300: '#FFC300'
+              },
+              fontFamily: {
+                'Lato': ['sans-serif']
               }
             }
           }
         }
       </script>
 
+    <!-- GOOGLEFONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
     <title>YourPhotos | Welcome!</title>
 </head>
 <body>
-    <%- include('./partials/navigation.ejs') %>
-    <div class="h-screen flex flex-col justify-center items-center">
-        <h1 class="text-3xl font-bold underline">Bienvenido/a!</h1>
+    <div class="h-screen flex flex-col justify-center items-center bg-FFC300">
+        <img src="../public/assets/images/Gallery-PNG-2.png">
+        <h1 class="text-3xl font-Lato font-bold underline">Bienvenido/a!</h1>
         <a class="my-8 p-3 w-24 text-center text-whitesmoke font-medium rounded-full bg-coral" href="/photos">Entra!</a>
     </div>
 </body>
