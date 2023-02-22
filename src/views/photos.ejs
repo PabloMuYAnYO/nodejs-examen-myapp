@@ -31,7 +31,7 @@
             <div class="flex flex-row flex-wrap justify-center items-center">
 
               <% for(let i=0; i<fotos.length; i++) {%>
-                <div class="m-2 p-3 w-80 h-96 border-2">
+                <div class="m-2 p-3 w-80 h-96 max-h-full border-2">
                   <div>
                     <p class="text-lg font-semibold"><%= fotos[i].titulo %></p>
                     <img src="<%= fotos[i].url %>">
