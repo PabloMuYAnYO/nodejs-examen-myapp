@@ -11,7 +11,9 @@
             colors: {
               coral: '#FF7F50',
               whitesmoke : '#F5F5F5',
-              FFC300: '#FFC300'
+              FFC300: '#FFC300',
+              C70039: '#C70039',
+              229954: '#229954 ' 
             }
           }
         }
@@ -22,26 +24,28 @@
 <body>
     <%- include('./partials/navigation.ejs') %>
     <div class="bg-white">
-        <div class="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+        <div class="mt-6">
           <h2 class="text-2xl font-bold tracking-tight text-gray-900">Tus fotos aquí!</h2>
-      
-          <div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-
-            <div class="group relative">
+          <hr>
+          
+            <div class="flex flex-row flex-wrap justify-center items-center">
 
               <% for(let i=0; i<fotos.length; i++) {%>
-                <div>
-                    <p><%= fotos[i].titulo %></p>
+                <div class="m-2 p-3 w-80 h-96 border-2">
+                  <div>
+                    <p class="text-lg font-semibold"><%= fotos[i].titulo %></p>
                     <img src="<%= fotos[i].url %>">
                     <p><%= fotos[i].fecha %></p>
-                    <p><%= fotos[i].descripcion %></p>
+                    <p><%= fotos[i].descripcion %></p> 
+                  </div>
+                  <br>
+                  <a class="my-8 p-3 w-24 text-center text-whitesmoke font-medium rounded-full bg-229954" href="photos/editphoto/<%= fotos[i].id%>">Edit</a>
+                  <a class="my-8 p-3 w-24 text-center text-whitesmoke font-medium rounded-full bg-C70039" href="photos/deletephoto/<%= fotos[i].id%>">Delete</a>
                 </div>
-                <a href="photos/editphoto/<%= fotos[i].id%>">Editar</a>
-                <a href="photos/deletephoto/<%= fotos[i].id%>">Borrar</a>
               <% } %>
 
             </div>
-          </div>
+
 
         </div>
       </div>

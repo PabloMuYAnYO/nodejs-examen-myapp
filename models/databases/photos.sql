@@ -1,9 +1,7 @@
--- BASE DE DATOS photos
 DROP DATABASE IF EXISTS photos;
 CREATE DATABASE photos CHARSET utf8mb4;
 USE photos;
-
--- TABLA libros 
+ 
 CREATE TABLE fotos(
     id INT PRIMARY KEY AUTO_INCREMENT,
     titulo VARCHAR(25) NOT NULL,

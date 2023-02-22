@@ -1,8 +1,41 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+  <%- include('./partials/head.ejs') %>
+  <!-- Tailwind config for index.ejs -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                coral: '#FF7F50',
+                whitesmoke : '#F5F5F5',
+                FFC300: '#FFC300',
+                C70039: '#C70039',
+                229954: '#229954 ' 
+              },
+              fontFamily: {
+                'Lato': ['sans-serif']
+              }
+            }
+          }
+        }
+      </script>
 
-    <form action="/photos/editphoto/:id" method="post">
-        <input type="text" placeholder="titulo" name="titulo">
-        <input type="text" placeholder="url" name="url">
-        <input type="text" placeholder="fecha" name="fecha">
-        <input type="text" placeholder="descripcion" name="descripcion">
-        <button type="submit">Añadir</button>
-    </form>
+    <title>YourPhotos | Add a photo!</title>
+</head>
+<body>
+    <%- include('./partials/navigation.ejs') %>
+
+    <div class="flex justify-center aling-center">
+        <form action="/photos/editphoto/<%= foto.id %>" method="post" class="m-4 p-4 flex flex-col border-4">
+            <input type="text" placeholder="titulo" name="titulo" value="<%= foto.titulo %>">
+            <input type="text" placeholder="url" name="url" value="<%= foto.url %>">
+            <input type="text" placeholder="fecha" name="fecha" value="<%= foto.fecha %>">
+            <input type="text" placeholder="descripcion" name="descripcion" value="<%= foto.descripcion %>">
+            <button class="my-8 p-3 w-24 text-center text-whitesmoke font-medium rounded-full bg-229954" type="submit">Update!</button>
+        </form>
+    </div>
+
+</body>
+</html>
