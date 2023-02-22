@@ -1,15 +1,8 @@
 <!DOCTYPE html>
 <html lang="es-ES">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- STYLESHEET -->
-    <link src="../public/stylesheets/style.css">
-
-    <!-- TAILWINDCSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
+  <%- include('./partials/head.ejs') %>
+  <!-- Tailwind config for index.ejs -->
     <script>
         tailwind.config = {
           theme: {
@@ -27,17 +20,12 @@
         }
       </script>
 
-    <!-- GOOGLEFONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-
     <title>YourPhotos | Welcome!</title>
 </head>
 <body>
     <div class="h-screen flex flex-col justify-center items-center bg-FFC300">
         <img src="../public/assets/images/Gallery-PNG-2.png">
-        <h1 class="text-3xl font-Lato font-bold underline">Bienvenido/a!</h1>
+        <h1 style="font-family: 'Lato', sans-serif;" class="text-3xl font-Lato font-bold underline">Bienvenido/a!</h1>
         <a class="my-8 p-3 w-24 text-center text-whitesmoke font-medium rounded-full bg-coral" href="/photos">Entra!</a>
     </div>
 </body>

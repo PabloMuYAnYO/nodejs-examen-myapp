@@ -4,7 +4,7 @@ CREATE DATABASE photos CHARSET utf8mb4;
 USE photos;
 
 -- TABLA libros 
-CREATE TABLE photos(
+CREATE TABLE fotos(
     id INT PRIMARY KEY AUTO_INCREMENT,
     titulo VARCHAR(25) NOT NULL,
     url VARCHAR(255) NOT NULL,

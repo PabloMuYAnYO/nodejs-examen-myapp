@@ -4,18 +4,17 @@ const dataConnection = require('../config/databaseConn');
 
 
 // router.get('/', (req, res, next) => {
-// //   res.send('<h1>PHOTOS PAGE!!</h1>');
-//   res.render('photos'); 
+
 // });
 
 router.get('/', (req, res, next) =>{
   dataConnection.query( 
-    'SELECT * FROM fotos', 
+    'SELECT * FROM fotos;', 
       (err, results, fields) =>{
         console.log(results);
-        console.log(fields);
+        // console.log(fields);
         //   res.send('<h1>PHOTOS PAGE!!</h1>');
-        res.render('photos', {fotos: results})
+        res.render('photos', {fotos: results});
       }
     );
 });
