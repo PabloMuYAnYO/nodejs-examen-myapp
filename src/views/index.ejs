@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- STYLESHEET -->
+    <link src="../public/stylesheets/style.css">
+
+    <!-- TAILWINDCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                coral: '#FF7F50',
+                whitesmoke : '#F5F5F5',
+                FFC300: '#FFC300'
+              }
+            }
+          }
+        }
+      </script>
+
+    <title>YourPhotos | Welcome!</title>
+</head>
+<body>
+    <%- include('./partials/navigation.ejs') %>
+    <div class="h-screen flex flex-col justify-center items-center">
+        <h1 class="text-3xl font-bold underline">Bienvenido/a!</h1>
+        <a class="my-8 p-3 w-24 text-center text-whitesmoke font-medium rounded-full bg-coral" href="/photos">Entra!</a>
+    </div>
+</body>
+</html>
